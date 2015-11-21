@@ -21,6 +21,8 @@ TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_VARIANT := krait
+TARGET_USE_KRAIT_BIONIC_OPTIMIZATION := true
+TARGET_USE_KRAIT_PLD_SET := true
 
 TARGET_NO_BOOTLOADER := false
 
@@ -121,3 +123,10 @@ USE_MINIKIN := true
 
 # Include an expanded selection of fonts
 EXTENDED_FONT_FOOTPRINT := true
+
+# Twisted optimizations
+export CLANG_O3 := true
+export STRICT_ALIASING := true
+export GRAPHITE_OPTS := true
+export USE_O3_OPTIMIZATIONS := true
+export ENABLE_GCCONLY := true  
